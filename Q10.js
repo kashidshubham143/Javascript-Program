@@ -1,0 +1,7 @@
+let n=12345,count=0;
+for(let i=1;n>0;i++)
+{	
+	n=parseInt(n/10);
+	count++;
+}
+console.log("Count="+count);
