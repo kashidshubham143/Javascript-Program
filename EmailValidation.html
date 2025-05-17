@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+       function validateEmail(str)
+	{  
+	   let index=str.indexOf('@');
+       let index1=str.lastIndexOf('@');
+       let span=document.getElementById('s');
+       if(index<=0||index!=index1)
+       {
+        span.innerHTML="Invalid email";
+        span.style.color="red";
+       }
+       else
+       {
+            let as=str.subString((index+1));
+            let index=as.indexOf('.');
+            let index1=as.lastIndexOf('.');
+            if(index==-1||index!=index1||(index!=(as.length-4)&&index!=(as.length-3)))
+            {
+                span.innerHTML="Invalid email";
+                span.style.color="red";
+            }
+            else
+            {
+                span.innerHTML="valid email";
+                span.style.color="red";
+            }
+       }
+    }
+    </script>
+</head>
+<body>
+    Email :<input type="text" name="email" onkeyup="validateEmail(this.value)"><span id="s"></span><br>
+    <input type="Submit">
+</body>
+</html>
