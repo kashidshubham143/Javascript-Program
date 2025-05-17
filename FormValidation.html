@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function data()
+        {
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var c=document.getElementById("n3").value;
+            var d=document.getElementById("n4").value;
+            if(a==""||b==""||c==""||d=="")
+            {
+                alert("Fields are mendatory");
+                return false;
+            }
+            else if(b.indexOf('@')<=0)
+            {
+                alert("Invalid");
+                return false;
+            }
+            else if(c.length<10||c.length>10)
+            {
+                alert("Contact should be 10 number !Please enter valid number");
+                return false;
+            }
+            else if(isNaN(b))
+            {
+                alert("Only Number are allowed. !Please enter valid number");
+                return false;
+            }
+            else
+            {
+                true;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return data()" action="abc.html">
+        User name : <input type="text" id="n1"><br>
+        Email :     <input type="text" id="n2"><br>
+        Contact :   <input type="number" id="n3"><br>
+        password :  <input type="password" id="n4"><br>
+        <input type="Submit">
+    </form>
+</body>
+</html>
